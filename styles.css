@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    max-width: 1500px;
+    background-color: #f2f2f2;
+    margin: 15px;
+    padding: 10px; 
+}
+
+.top_logo {
+    display: flex;
+    justify-content: center;
+}
+
+.group_chat_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 100%;
+}
+
+.hero-right {
+    background-image: url('./assets/image-hero-right.png');
+    height: 100%;
+    background-repeat: no-repeat;
+    /* width: 45%; */
+    /* Not sure about min-width */
+    min-width: 397px;
+}
+
+.group_chat_main-text {
+    text-align: center;
+    /* Not sure about min-width */
+    min-width: 690px;
+}
+
+.group_chat_main-text p:first-child {
+    color: #28283D;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.group_chat_main-text p:nth-child(2) {
+    color: #87879D;
+    font-size: 26px;
+}
+
+
+.hero-left {
+    background-image: url('./assets/image-hero-left.png');
+    height: 100%;
+    background-repeat: no-repeat;
+    /* width: 45%; */
+    /* Not sure about min-width */
+    min-width: 397px;
+}
