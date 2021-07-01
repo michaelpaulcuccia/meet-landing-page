@@ -35,19 +35,13 @@ body {
     width: 100%;
 }
 
-.hero-right {
-    background-image: url('./assets/image-hero-right.png');
-    height: 100%;
-    background-repeat: no-repeat;
-    /* width: 45%; */
-    /* Not sure about min-width */
-    min-width: 397px;
-}
-
 .group_chat_main-text {
     text-align: center;
-    /* Not sure about min-width */
-    min-width: 690px;
+    padding: 0px 10px;
+}
+
+.group_chat_main-text-mobile {
+    display: none;
 }
 
 .group_chat_main-text p:first-child {
@@ -61,12 +55,21 @@ body {
     font-size: 26px;
 }
 
-
-.hero-left {
-    background-image: url('./assets/image-hero-left.png');
-    height: 100%;
-    background-repeat: no-repeat;
-    /* width: 45%; */
-    /* Not sure about min-width */
-    min-width: 397px;
+/* DESKTOP group_chat_container */
+/* resize text container, fonts, and images */
+@media (max-width: 1190px){
+    .group_chat_main-text {
+        min-height: 301px;
+        min-width: 248px;
+    }
+    .group_chat_main-text p:first-child {
+        font-size: 50px;
+    }
+    .group_chat_main-text p:nth-child(2) {
+        font-size: 22px;
+    }
+    .group_chat_image {
+        height: 60%;
+        width: 60%;
+    }
 }
