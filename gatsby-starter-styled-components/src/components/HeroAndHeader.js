@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import left from '../images/assets/image-hero-left.png';
 import right from '../images/assets/image-hero-right.png';
 import logo from '../images/assets/logo.svg';
+import Button from './Button';
 
 const MainWrapper = styled.div`
     display: flex;
@@ -74,8 +75,15 @@ const HeroRight = styled.div`
     width: 30%;
 `;
 
+const ButtonContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+`;
+
 const HeroAndHeader = () => {
     return (
+        <>
         <MainWrapper>
             <HeroLeft />
             <CenterContentWrapper>
@@ -86,9 +94,14 @@ const HeroAndHeader = () => {
                 <SubText>
                 Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
                 </SubText>
+                <ButtonContainer>
+                    <Button>Download v1.0</Button>    
+                    <Button variant="secondary">What is it?</Button> 
+                </ButtonContainer>
             </CenterContentWrapper>
             <HeroRight />
-        </MainWrapper>
+        </MainWrapper>   
+        </>
     )
 }
 
