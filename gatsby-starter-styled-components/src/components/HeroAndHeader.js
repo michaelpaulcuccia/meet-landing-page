@@ -11,25 +11,66 @@ const MainWrapper = styled.div`
     width: 100%;
     height: 400px;
     overflow: hidden;
+
+    @media (max-width: 765px) {
+        display: grid;
+        justify-items: center;
+        height: 800px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "HeroMobile HeroMobile HeroMobile HeroMobile"
+        "HeroLeft HeroLeft HeroRight HeroRight"
+        "CenterContentWrapper CenterContentWrapper CenterContentWrapper CenterContentWrapper"
+        ". ButtonContainer ButtonContainer . ";
+    }
 `;
 
 const HeroLeft = styled.div`
+    grid-area: HeroLeft;
     background-image: url(${left});
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 100%;
-    //width: 525px;
-    //width: clamp(200px, 475px, 525px);
     width: 30%;
+
+    @media (max-width: 765px) {
+        width: 100%;
+    }
 `;
 
 const CenterContentWrapper = styled.div`
+    grid-area: CenterContentWrapper;
     display: flex;
     flex-direction: column;
-    //width: 550px;
     width: 40%;
     padding: 0 25px;
+
+    @media (max-width: 765px) {
+        width: 70%
+    }
+
+`;
+
+// HACK - for mobile
+// HeroCenter is within CenterContentWrapper
+// This one exists outside of it
+// HeroCenter will be hidden on Mobile
+
+const HeroMobile = styled.div`
+    grid-area: HeroMobile;
+    display: none;
+
+@media (max-width: 765px) {
+    display: flex;
+    background-image: url(${logo});
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
 `;
 
 const HeroCenter = styled.div`
@@ -39,6 +80,10 @@ const HeroCenter = styled.div`
     height: 100%;
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: 765px) {
+       display: none;
+    }
 `;
 
 const MainText = styled.p`
@@ -51,7 +96,10 @@ const MainText = styled.p`
         font-size: 58px;
     }    
 
-    //at 765px go to Mobile
+    @media (max-width: 765px) {
+        font-size: 36px;
+    }
+
 `;
 
 const SubText = styled.p`
@@ -62,20 +110,29 @@ const SubText = styled.p`
     @media (max-width: 1075px){
         font-size: 20px;
     }  
+
+    @media (max-width: 1075px){
+        font-size: 12px;
+    }
+    
 `;
 
 const HeroRight = styled.div`
+    grid-area: HeroRight;
     background-image: url(${right});
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 100%;
-    //width: 525px;
-    //width: clamp(200px, 475px, 525px);
     width: 30%;
+
+    @media (max-width: 765px) {
+        width: 100%;
+    }
 `;
 
 const ButtonContainer = styled.div`
+    grid-area: ButtonContainer;
     display: flex;
     justify-content: center;
     padding-top: 15px;
@@ -85,6 +142,7 @@ const HeroAndHeader = () => {
     return (
         <>
         <MainWrapper>
+            <HeroMobile />
             <HeroLeft />
             <CenterContentWrapper>
                 <HeroCenter />
