@@ -8,6 +8,10 @@ const Container = styled.div`
     max-width: 1400px;
     margin 15px auto;
     background-color: #F2F2F2;
+
+    @media (max-width: 765px) {
+      max-width: 375px;
+    }
 `;
 
 const MainWrapper = (props) => {

@@ -81,7 +81,7 @@ const HeroCenter = styled.div`
   margin: 0 auto;
 
   @media (max-width: 1075px) {
-    height: 35%;
+    height: 25%;
   }
 
   @media (max-width: 765px) {
@@ -110,7 +110,7 @@ const SubText = styled.p`
   font-size: 26px;
 
   @media (max-width: 1075px) {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   @media (max-width: 765px) {
