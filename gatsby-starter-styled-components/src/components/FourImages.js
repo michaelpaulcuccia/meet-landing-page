@@ -20,6 +20,7 @@ const GridContainer = styled.div`
 
     @media (max-width: 1135px) {
         grid-column-gap: 10px;
+        margin-top: 45px;
 
         img {
             height: 182px;

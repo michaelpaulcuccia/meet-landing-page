@@ -15,7 +15,7 @@ const MainWrapper = styled.div`
   @media (max-width: 765px) {
     display: grid;
     justify-items: center;
-    height: 600px;
+    //height: 450px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
@@ -35,8 +35,13 @@ const HeroLeft = styled.div`
   height: 100%;
   width: 30%;
 
+  @media (max-width: 1075px) {
+    height: 80%
+  }
+
   @media (max-width: 765px) {
     width: 100%;
+    height: 100px;
   }
 `;
 
@@ -68,7 +73,7 @@ const HeroMobile = styled.div`
     background-position: center;
     height: 100%;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 15px;
   }
 `;
 
@@ -96,7 +101,7 @@ const MainText = styled.p`
   font-weight: 900;
 
   @media (max-width: 1075px) {
-    font-size: 58px;
+    font-size: 42px;
   }
 
   @media (max-width: 765px) {
@@ -110,7 +115,7 @@ const SubText = styled.p`
   font-size: 26px;
 
   @media (max-width: 1075px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   @media (max-width: 765px) {
@@ -127,8 +132,13 @@ const HeroRight = styled.div`
   height: 100%;
   width: 30%;
 
+  @media (max-width: 1075px) {
+    height: 80%
+  }
+
   @media (max-width: 765px) {
     width: 100%;
+    height: 100px;
   }
 `;
 
